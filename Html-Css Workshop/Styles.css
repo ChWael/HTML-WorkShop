@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  background-image: url("./Img/mo7sen.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  font-size: larger;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  background-color: rgba(22, 43, 72);
+  height: 3rem;
+  box-shadow: 0px 8px 12px -5px rgba(0, 0, 0, 0.73);
+}
+.link {
+  font-weight: bold;
+  color: white;
+}
+
+.btn-nav {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+iframe {
+  margin-top: 3%;
+  width: 70%;
+}
+
+.video {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+main {
+  margin-top: 1%;
+  padding: 1rem;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgba(175, 173, 173, 0.726);
+  margin-bottom: 0%;
+  border-radius: 20px 20px 20px 20px;
+}
+.left {
+  width: 30%;
+}
+.img-holder {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 200px 200px 200px 200px;
+  border: 2px solid #000000;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+}
+.pic {
+  display: block;
+  width: inherit;
+  height: auto;
+  margin: 0 auto;
+}
+.about-me {
+  height: 500px;
+}
+
+p {
+  font-size: 1.5rem;
+  color: black;
+}
+
+section {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  color: rgb(41, 41, 224);
+}
+
+.footer {
+  text-align: center;
+  background-color: rgba(175, 173, 173, 0.726);
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: rgb(41, 41, 224);
+  border-radius: 20px 20px 20px 20px;
+  padding: 1rem;
+}
+
+.no-margin-top {
+  margin-top: 0%;
+}
