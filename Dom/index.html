@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cart</title>
+</head>
+<body>
+    <section>
+        <h1>Shopping Cart</h1>
+        
+        <div class="shopping-cart">
+
+            <div class="column-labels">
+                <label class="product-image">Image</label>
+                <label class="product-details">Product</label>
+                <label class="product-price">Price</label>
+                <label class="product-quantity">Quantity</label>
+                <label class="product-removal">Remove</label>
+                <label class="">Like</label>
+                <label class="product-line-price">Total</label>
+            </div>
+            <div class="product" >
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/61jy4BUcEmL._AC_SL1500_.jpg" height="200px">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Wireless Gaming Headset</div>
+                    <p class="product-description">Experience uncompromising sound quality and immersive 7. 1 surround sound with a matched pair of precisely tuned 50mm high-density neodymium speaker drivers, delivering a frequency range of 20hz-40, 000Hz – double that of typical gaming headsets.</p>
+                </div>
+                <div class="product-price" id="price-1">190.00</div>
+                <div class="product-quantity flex">
+                    <div>
+                        <button onclick="decrement('first')">-</button>
+                    </div>
+                    <div>
+                        <input type="number" id="first" value="1" min="1">
+                    </div>
+                    <div>
+                        <button onclick="increment('first')">+</button>
+                    </div>
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product" onclick="remove('first')">
+                        Remove
+                    </button>
+                </div>
+                <div class="product-removal">
+                    <i id="heart-1" onclick="like('heart-1')" class="fa fa-heart"></i>
+                </div>
+                <div class="product-line-price" id="total-price-1" >190.00</div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/61a0KNfNNNL._AC_SL1500_.jpg" height="150px">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Corsair Gaming Mouse</div>
+                    <p class="product-description">Corsair exclusive software automatically detects the center of gravity in real time, allowing you to adjust weight between 119g and 141g and fine tune balance to perfectly fit your grip.</p>
+                </div>
+                <div class="product-price" id="price-2">80.00</div>
+                <div class="product-quantity flex">
+                    <div>
+                        <button onclick="decrement('second')">-</button>
+                    </div>
+                    <div>
+                        <input type="number" id="second" value="1" min="1">
+                    </div>
+                    <div>
+                        <button onclick="increment('second')">+</button>
+                    </div>
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product" onclick="remove('second')">
+                        Remove
+                    </button>
+                </div>
+                <div class="product-removal">
+                    <i id="heart-2" onclick="like('heart-2')" class="fa fa-heart"></i>
+                </div>
+                <div class="product-line-price" id="total-price-2">80.00</div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/714yy-QPysL._AC_SL1200_.jpg">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Corsair Mechanical Gaming Keyboard</div>
+                    <p class="product-description">Per-key RGB backlighting and a 19-zone LightEdge across the top of the keyboard delivers dynamic and vibrant lighting effects with near-limitless customization.</p>
+                </div>
+                <div class="product-price" id="price-3">160.00</div>
+                <div class="product-quantity flex">
+                    <div>
+                        <button onclick="decrement('third')">-</button>
+                    </div>
+                    <div>
+                        <input type="number" id="third" value="1" min="1">
+                    </div>
+                    <div>
+                        <button onclick="increment('third')">+</button>
+                    </div>
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product" onclick="remove('third')">
+                        Remove
+                    </button>
+                </div>
+                <div class="product-removal">
+                    <i id="heart-3" onclick="like('heart-3')" class="fa fa-heart"></i>
+                </div>
+                <div class="product-line-price" id="total-price-3">160.00</div>
+            </div>
+
+            <div class="totals">
+                <div class="totals-item">
+                    <label>Total</label>
+                    <div class="totals-value" id="cart-total">430.00</div>
+                </div>
+            </div>
+
+            <button class="checkout" onclick="refresh()">Checkout</button>
+
+        </div>
+
+        <svg ></svg>
+
+    </section>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
