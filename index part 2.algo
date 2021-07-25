@@ -1,0 +1,61 @@
+ALGORITHM algorithm_Parte_2(Array);
+VAR
+    set1 : ARRAY_OF INTEGER[3];
+    set2 : ARRAY_OF INTEGER[4];
+    i,j:INTEGER:=0;
+    sum:INTEGER:=0;
+:BEGIN
+    FOR i FROM 0 TO set1.lenght-1 STEP 1  DO
+        
+        FOR j FROM 0 TO set2.lenght-1 STEP 1  DO
+    
+            IF (set1[i]<>set2[j]) THEN
+                sum:= sum +ste1[i]+set2[j];
+            END_IF
+        END_FOR
+    END_FOR
+    FOR i FROM 0 TO set2.lenght-1 STEP 1  DO
+        
+        FOR j FROM 0 TO set1.lenght-1 STEP 1  DO
+    
+            IF (set2[j]<>set1[i]) THEN
+                sum:= sum +ste2[j]+set1[i];
+            END_IF
+        END_FOR
+    END_FOR
+    Write("Sum of overlapping elements",sum);
+END
+
+
+
+
+
+
+ALGORITHM algorithm_Parte_2(Hashtable);
+VAR
+    htab:HASH_TABLE<INTEGER,STRING>;
+    str1:STRING[3];
+    str2:STRING[4];
+    i,j:INTEGER:=0;
+    sum:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 to str1.lenght-1 STEP 1 DO
+
+        FOR j FROM 0 TO str2.lenght-1 STEP 1 DO
+
+            IF (htab.lookup(str1[i])==(htab.lookup(str2[j]))) THEN
+                sum:= sum + htab.get(str1[i]) + htab.get(str2[j]);
+            END_IF
+        END_FOR
+    END_FOR
+    FOR j FROM 0 to str2.lenght-1 STEP 1 DO
+
+        FOR i FROM 0 TO str1.lenght-1 STEP 1 DO
+
+            IF (htab.lookup(str2[j])<>(htab.lookup(str1[i]))) THEN
+                sum:= sum + htab.get(str2[j]) + htab.get(str1[i]);
+            END_IF
+        END_FOR
+    END_FOR
+    Write("Sum of overlapping elements",sum);    
+END
