@@ -1,0 +1,71 @@
+PROCEDURE Dot_Product(v1,v2: ARRAY_OF type[INTEGER],dot:INTEGER);
+VAR
+    i,j:INTEGER:=0;
+BEGIN
+IF (v1[i].lenght <> v2[j].lenght) THEN
+    Write("Can Not Calculate")
+END_IF
+    FOR i FROM 0 TO v1.lenght-1 STEP 1  DO
+        FOR j FROM 0 TO v2.lenght STEP 1  DO
+            IF (v1[i] * v2[j] = 0) THEN
+            dot:=v1[i],v2[j]
+                Write(dot" Are orthogonal");
+            END_IF
+        END_FOR
+    END_FOR
+END
+
+
+
+ALGORITHM dot_product_function
+VAR
+    v1,v2 : ARRAY_OF type[INTEGER][50];
+    dot:INTEGER;
+    i,j:INTEGER;
+    x,y:INTEGER;
+BEGIN
+    Read(x:array[i,v1]);
+    Read(y:array[j,v2]);
+    Dot_Product(v1,v2,dot);
+    IF (dot = 0) THEN
+        Write("Are orthogonal")
+    ELSE
+        Write("Are Not orthogonal")
+    END_IF
+END
+
+
+
+
+FUNCTION dot_product(v1,v2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+    i,j : INTEGER := 0; 
+    dot : INTEGER;
+BEGIN
+    dot:=0;
+    IF (v1[i].lenght <> v2[j].lenght) THEN
+        Write("Can Not Calculate");
+        RETURN NaN;
+    END_IF
+    WHILE (i <v1.length ) DO
+        dot := dot + v1[i]*v2[i];
+    END_WHILE
+    RETURN dot ;
+END
+
+ALGORITHM orth_vectors
+VAR
+    v1,v2 : ARRAY_OF INTEGER [50];
+    dot : INTEGER;
+BEGIN
+    x := read_size();
+    read_array(x,v1);
+    y := read_size();
+    read_array(y,v2);
+    dot := dot_product(v1,v2);
+    IF (dot = 0) THEN
+        Write("Are Orthogonal");
+    ELSE
+        Write("Are Not Orthogonal");
+    END_IF
+END
